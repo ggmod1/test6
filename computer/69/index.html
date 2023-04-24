@@ -1,0 +1,1309 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>index</title>
+	<link rel="stylesheet" href="../first/base.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/echarts.min.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script type="text/javascript" src="js/echarts-wordcloud.min.js"></script>
+	<script type="text/javascript" src="js/echarts-map-china.js"></script>
+	<script src="js/js/map.js"></script>
+	<script src="js/js/44.json"></script>
+	<script src="js/js/area_echarts.js"></script>
+	<script src="js/js/china.js"></script>
+</head>
+
+<body>
+	<!--导航-->
+	<header class="header left">
+		<div class="left nav">
+			<ul>
+				<li><i class="nav_1"></i><a href="../first/first.html">首页界面</a> </li>
+				<li><i class="nav_2"></i><a href="../all/index.html">数据总览</a> </li>
+			</ul>
+		</div>
+		<div class="header_center left">
+			<h2><strong>后疫情时代——旅游经济发展分析平台</strong></h2>
+			<p class="color_font"><small>Comprehensive service platform for smart tourism</small></p>
+		</div>
+		<div class="right nav text_right">
+			<ul>
+				<li class="nav_active"><i class="nav_8"></i><a href="../69/index.html">旅游资源</a> </li>
+				<li><i class="nav_4"></i><a href="../preview/index.html">数据预测</a> </li>
+			</ul>
+		</div>
+	</header>
+	<!---结束-->
+	<div class="mainbox">
+
+		<ul class="clearfix nav1">
+			<!-- <li style="width: 25%">
+		<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" id="echart1" style="height: 180px;">
+
+			</div>
+			</div>
+			<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" style="height: 180px;" id="echart21">
+			</div>
+			</div>
+			
+			<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" id="echart3" style="height: 240px;">
+				
+			</div>
+			</div>
+		</li> -->
+			<li style="width: 100%;height: 100%; padding-top: 15px;">
+
+				<div class="box">
+					<div class="boxnav mapc" style="height: 850px; position: relative; padding: 0">
+
+
+
+
+						<!-- Swiper -->
+
+						<div class="swiper-container gallery-top">
+							<!-- <div class="mapnav">
+								<ul>
+									<li>
+										<div><span>全部负荷</span>
+											<p>358</p>
+										</div>
+									</li>
+									<li>
+										<div><span>火电负荷</span>
+											<p>913452</p>
+										</div>
+									</li>
+									<li>
+										<div><span>风电负荷</span>
+											<p>19532</p>
+										</div>
+									</li>
+									<li>
+										<div><span>供热负荷</span>
+											<p>521711</p>
+										</div>
+									</li>
+								</ul>
+
+							</div> -->
+							<div class="swiper-wrapper">
+
+								<!-- <div class="swiper-slide">
+
+									<div id="relationChart" style="height: 50%; width: 50%;float: left; "></div>
+									<div id="relationChart2" style="height: 50%; width: 50%;float: left;"></div>
+									<div style="position: absolute;top: 550px; left: 30px;">
+										<h1>当前最热</h1>
+										<h4>按游客满意度实时更新</h4>
+
+
+									</div>
+									<div id="relationChart3"
+										style="height: 400px; width: 100%;float: left; padding-left: 200px;"></div>
+
+
+								</div> -->
+
+
+
+
+
+
+
+
+
+								<div class="swiper-slide">
+									<div id="map" style="height: 100%; width: 100%;"></div>
+									<div
+										style="z-index: 2;position: absolute; height: 50px; width: 50px; top:300px; right: 570px; ">
+										<a href="map.html" style="display: block; height: 50px; width: 50px;"></a>
+									</div>
+								</div>
+
+								<div class="swiper-slide" id="echart1"></div>
+								<!-- <div class="swiper-slide" id="echart3"></div> -->
+
+								<div class="swiper-slide" id="wordChart"></div>
+								<div class="swiper-slide">
+									<div class="leftdiv">
+										<div id="echart21" class="leftdivs">
+										</div>
+										<div id="echart3" class="leftdivs">
+										</div>
+									</div>
+									<div class="rightdiv">
+										<div class="tit">热门餐饮（点赞人数）</div>
+										<div class="boxnav">
+											<ul class="gnlb">
+												<li><span>川渝火锅（川）：<em>345435</em></span></li>
+												<li><span>回锅肉（川）：<em>2335253</em></span></li>
+												<li><span>麻婆豆腐（川）：<em>11439351</em></span></li>
+												<li><span>九转大肠（鲁）：<em>31219351</em></span></li>
+												<li><span>糖醋黄河鲤鱼（鲁）：<em>115651</em></span></li>
+												<li><span>油焖大虾（鲁）：<em>2316351</em></span></li>
+												<li><span>脆皮烧鹅（粤）：<em>271151</em></span></li>
+												<li><span>白切鸡（粤）：<em>1147851</em></span></li>
+												<li><span>烧乳猪（粤）：<em>732351</em></span></li>
+												<li><span>佛跳墙（闽）：<em>2529351</em></span></li>
+												<li><span>排骨莲藕（闽）：<em>803541</em></span></li>
+												<li><span>荔枝肉（闽）：<em>125751</em></span></li>
+												<li><span>松鼠桂鱼（苏）：<em>119351</em></span></li>
+												<li><span>大煮干丝（苏）：<em>125642</em></span></li>
+												<li><span>叫花鸡（苏）：<em>3142251</em></span></li>
+												<li><span>东坡肉（浙）：<em>2341351</em></span></li>
+												<li><span>西湖醋鱼（浙）：<em>124151</em></span></li>
+												<li><span>宋嫂鱼羹（浙）：<em>111512</em></span></li>
+											</ul>
+										</div>
+									</div>
+
+
+
+								</div>
+
+
+							</div>
+
+							<!-- Add Arrows -->
+
+							<div class="swiper-button-next swiper-button-white"></div>
+
+							<div class="swiper-button-prev swiper-button-white"></div>
+
+						</div>
+
+						<div class="swiper-container gallery-thumbs " style="padding-left: 200px;">
+
+							<div class="swiper-wrapper">
+								<div class="swiper-slide " style="background-image: url(images/img2.jpg); "></div>
+								<div class="swiper-slide" style="background-image: url(images/img1.jpg);"></div>
+								<div class="swiper-slide" style="background-image: url(images/img3.jpg);"></div>
+								<div class="swiper-slide" style="background-image: url(images/img4.jpg);"></div>
+								<!-- <div class="swiper-slide" style="background-image:url(images/1.jpg)"></div> -->
+								<!-- <div class="swiper-slide" style="background-color: purple;"></div> -->
+
+							</div>
+
+						</div>
+						<script>
+							var galleryThumbs = new Swiper('.gallery-thumbs', {
+								spaceBetween: 0,
+								slidesPerView: 5,
+								freeMode: true,
+								watchSlidesVisibility: true,
+								watchSlidesProgress: true,
+							});
+							var galleryTop = new Swiper('.gallery-top', {
+								spaceBetween: 10,
+								navigation: {
+									nextEl: '.swiper-button-next',
+									prevEl: '.swiper-button-prev',
+								},
+								thumbs: {
+									swiper: galleryThumbs
+								}
+							});
+						</script>
+					</div>
+				</div>
+				<!-- <ul class="nav1">
+					<li style="width: 50%">
+						<div class="box">
+							<div class="tit">标题样式</div>
+							<div class="boxnav" id="echart4" style="height: 200px;">
+
+							</div>
+						</div>
+					</li>
+					<li style="width: 50%">
+
+						<div class="box">
+							<div class="tit">标题样式</div>
+							<div class="boxnav" id="echart5" style="height: 200px;">
+
+							</div>
+						</div>
+					</li>
+				</ul> -->
+
+			</li>
+			<!-- <li style="width: 25%">
+		<div class="box">
+			
+			<div class="boxnav"  style="height: 76px;">
+			<div class="weather">
+				<div class="">
+				<div class="wt1">
+					<div class="wt2"><img src="images/weather.png"><p>29<sup>℃</sup></p></div>
+					<span>多云转晴</span>
+					</div>
+					
+				</div>
+				<div class="wt03">
+				<p><span>气温：</span>20 ~ 32℃</p>
+				<p><span>降水量：</span>32毫米</p>
+				<p><span>风况：</span>西北风微风</p>
+				</div>
+				</div>
+			</div>
+			</div>
+		<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" id="echart6" style="height: 170px;"></div>
+			</div>
+			
+			<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" style="height: 170px;" id="echart7"></div>
+			</div>
+		<div class="box">
+			<div class="tit">标题样式</div>
+			<div class="boxnav" style="height: 170px;">
+			<ul class="gnlb">
+				<li><span>月平均小时：<em>119351</em></span></li>
+				<li><span>月平均小时：<em>119351</em></span></li>
+				<li><span>月平均小时：<em>119351</em></span></li>
+				<li><span>月平均小时：<em>119351</em></span></li>
+				<li><span>月平均小时：<em>119351</em></span></li>
+				<li><span>月平均小时：<em>119351</em></span></li>
+				</ul>
+			
+			</div>
+			</div>
+		</li> -->
+		</ul>
+
+
+
+
+	</div>
+
+
+
+	<script>
+
+
+		const wordChart = echarts.init(document.getElementById("wordChart"));
+		const wordOpt = {
+
+			tooltip: {
+				show: true
+			},
+			series: [{
+				type: 'wordCloud',
+				shape: 'circle', //circle cardioid diamond triangle-forward triangle
+				left: 0,
+				right: 0,
+				top: 0,
+				right: 0,
+				width: '100%',
+				height: '100%',
+				gridSize: 40, //值越大，word间的距离越大，单位像素
+				sizeRange: [20, 100], //word的字体大小区间，单位像素
+				rotationRange: [-90, 90], //word的可旋转角度区间
+				textStyle: {
+
+					normal: {
+						color: function () {
+							return 'rgb(' + [
+								Math.round(Math.random() * 160),
+								Math.round(Math.random() * 160),
+								Math.round(Math.random() * 160)
+							].join(',') + ')';
+						},
+
+					},
+					emphasis: {
+						shadowBlur: 2,
+						shadowColor: '#000'
+					}
+				},
+				data: [{
+					name: '旅游管理体制',
+					value: 3000,
+					textStyle: {
+						normal: { color: '#f52f55' },
+						emphasis: {}
+					}
+				}, {
+					name: '全域旅游',
+					value: 2181
+				}, {
+					name: '门票减免',
+					value: 1386
+				}, {
+					name: '旅游企业',
+					value: 2055
+				}, {
+					name: '乡村旅游',
+					value: 2467
+				}, {
+					name: '民宿旅游',
+					value: 2244
+				}, {
+					name: '旅游执法',
+					value: 1898
+				}, {
+					name: '强迫购物',
+					value: 1484
+				}, {
+					name: ' 周边游 ',
+					value: 3865
+				}, {
+					name: '红色旅游 ',
+					value: 897
+				}, {
+					name: '机票盲盒	',
+					value: 847
+				}, {
+					name: ' 大西北 ',
+					value: 1366
+				}, {
+					name: '北京环球度假区开园',
+					value: 555
+				}, {
+					name: '电竞酒店',
+					value: 550
+				}, {
+					name: '囤旅游  "中"',
+					value: 2222
+				}, {
+					name: '古镇园林',
+					value: 366
+				}, {
+					name: '乡村民宿',
+					value: 360
+				}, {
+					name: '户外露营',
+					value: 282
+				}, {
+					name: '江河夜游',
+					value: 273
+				}, {
+					name: '动植物园成为今年端午小长假五大旅行关键词',
+					value: 265
+				},
+				{
+					name: '复苏',
+					value: 1265
+				},
+				{
+					name: '恢复程度',
+					value: 265
+				},
+				{
+					name: '文明旅游红榜',
+					value: 265
+				},
+				{
+					name: '‘五一’出境游',
+					value: 550
+				}, {
+					name: '互联网+',
+					value: 2222
+				}, {
+					name: '智能合约',
+					value: 366
+				}, {
+					name: '比特币',
+					value: 360
+				}, {
+					name: '淄博烧烤',
+					value: 1100
+				}, {
+					name: '泰山免门票',
+					value: 1212
+				}, {
+					name: '公交车免费',
+					value: 265
+				},
+				{
+					name: '海和洱海',
+					value: 265
+				},
+				{
+					name: '花与“花花”',
+					value: 265
+				},
+				{
+					name: '大学生军训式旅游',
+					value: 565
+				}
+
+				],
+
+			}],
+			backgroundColor: 'rgba(255, 255, 255, 0.5)'
+		};
+		wordChart.setOption(wordOpt);
+		//地图
+		var myChart = echarts.init(document.getElementById('map'));
+		// echarts.registerMap('China', { geoJson: ChinaJson });
+		// echarts.registerMap('ShanDong', { geoJson: ShanDongJson });
+		var option = {
+
+			title: {
+				show: true,
+				text: '景区分布',
+				textStyle: {
+
+					fontSize: 25,
+					color: '#fff'
+
+				}
+
+			},
+
+			tooltip: { //鼠标hover是提示信息
+				show: true, //不显示提示标签
+				formatter: '{b}<br/>{c} 个景区', //提示标签格式
+				//backgroundColor: "#ff7f50", //提示标签背景颜色
+				textStyle: {
+					color: "white",
+					fontSize: "20"
+				} //提示标签字体颜色
+			},
+			visualMap: {
+				show: true,
+
+				left: 300,
+				top: 500,
+
+				type: 'piecewise',
+				pieces: [
+					{ min: 150 },
+					{ min: 100, max: 150 },
+					{ min: 31, max: 90 },
+					{
+						min: 200,
+						max: 300,
+						label: '200 - 300 (Custom Color)',
+						color: 'lightgreen'
+					},
+					{ min: 10, max: 20, label: '10 to 200 景区' }
+				],
+				outOfRange: {
+					color: '#eee'
+				}
+
+			},
+			series: [{
+				type: 'map',
+				color: "red",
+				mapType: 'china',
+				roam: "false", //是否开启缩放平移
+				label: { //标签字体样式
+					position: "inside",
+					normal: { //正常情况下显示效果
+						show: true, //显示省份标签
+						textStyle: {
+							color: "#fff",
+							fontSize: 15
+						} //省份标签字体颜色
+					},
+					emphasis: { //对应的鼠标悬浮效果
+						show: true,
+						textStyle: {
+							color: "#800080"
+						}
+					}
+				},
+				// itemStyle: {
+				//     ShadowColor: 'rgba(12,0,0,0.5)',
+				//     ShadowBlur: 10,
+				//     ShadowOffsetY: 5,
+				//     ShadowOffsetX: 5,
+				//     normal: {
+				//         borderWidth: 1, //区域边框宽度
+				//         borderColor: '#fff', //区域边框颜色
+				//         //areaColor: "#ffefd5", //区域颜色
+				//         fontSize: "30"
+				//     },
+				//     emphasis: {
+				//         borderWidth: 1,
+				//         borderColor: '#3246FB',
+				//         areaColor: "#06306d",
+				//     },
+				itemStyle: {
+					normal: {
+						borderColor: "rgba(255, 255, 255, 0.5)",//地图边框描边颜色
+						borderWidth: 1,
+						areaColor: {
+							type: "radial",
+							x: 0.5,
+							y: 0.5,
+							r: 0.8,
+							// colorStops: [
+							// 	{
+							// 		offset: 0,
+							// 		color: "rgba(147, 235, 248, 0)", // 0% 处的颜色
+							// 	},
+							// 	{
+							// 		offset: 1,
+							// 		color: "rgba(147, 235, 248, .2)", // 100% 处的颜色
+							// 	},
+							// ],
+							globalCoord: false, // 缺省为 false
+						},
+						shadowColor: "rgba(128, 128, 128, 1)",
+						shadowOffsetX: -5,
+						shadowOffsetY: 5,
+						shadowBlur: 10,
+					},
+					// 鼠标放上去高亮的样式
+					emphasis: {
+						// areaColor: "#389BB7", //鼠标放上去地图区域的颜色
+						// borderWidth: 0,
+						// borderWidth: 1,
+						// borderColor: '#3246FB',
+						areaColor: "#06306d",
+					},
+				},
+
+				data: [{
+					name: '北京',
+					value: 2500,
+				}, {
+					name: '天津',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '上海',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '重庆',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '河北',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '河南',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '云南',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '辽宁',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '黑龙江',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '湖南',
+					value: 3000
+				}, {
+					name: '安徽',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '山东',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '新疆',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '江苏',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '浙江',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '江西',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '湖北',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '广西',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '甘肃',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '山西',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '内蒙古',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '陕西',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '吉林',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '福建',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '贵州',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '广东',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '青海',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '西藏',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '四川',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '宁夏',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '海南',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '台湾',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '香港',
+					value: Math.round(Math.random() * 100)
+				}, {
+					name: '澳门',
+					value: Math.round(Math.random() * 100)
+				}]
+			}],
+		};
+		// this.myEchartS.on('click', (event) => {
+		//     if (event.name === '山东省') {
+		//         this.myEcharts.setOption({
+		//             title: {
+		//                 text: '山东省'
+		//             },
+		//             series: [{
+		//                 type: 'map',
+		//                 map: 'ShanDong'
+		//             }]
+		//         })
+		//         this.mapInfo.push('China')
+		//     }
+		// })
+		myChart.setOption(option);
+
+		//第二个
+		const relationChart2 = echarts.init(document.getElementById("relationChart2"));
+		const relationOpt2 = {
+			animationDurationUpdate: 1500,
+			animationEasingUpdate: 'quinticInOut',
+			label: {
+				normal: {
+					show: true,
+					textStyle: {
+						fontSize: 12
+					}
+				}
+			},
+			series: [{
+				type: 'graph',
+				symbolSize: 45,
+				focusNodeAdjacency: true,
+				roam: true,
+				layout: 'force',
+				force: {
+					repulsion: 320 //斥力因子，值越大，斥力越大
+				},
+				label: {
+					normal: {
+						show: true,
+						textStyle: {
+							fontSize: 12
+						},
+					}
+				},
+				edgeSymbolSize: [4, 50],
+				edgeLabel: {
+					normal: {
+						show: true,
+						textStyle: {
+							fontSize: 10
+						},
+						formatter: "{c}"
+					}
+				},
+				categories: [{
+					name: '景区',
+					itemStyle: {
+						normal: {
+							color: '#f2637b'
+						}
+					}
+				}, {
+					name: '前端',
+					itemStyle: {
+						normal: {
+							color: "#eaa674",
+						}
+					}
+				}, {
+					name: '移动端',
+					itemStyle: {
+						normal: {
+							color: "#3aa1ff",
+						}
+					}
+				}, {
+					name: '服务端',
+					itemStyle: {
+						normal: {
+							color: "#4ecb73",
+						}
+					}
+				}],
+				data: [{
+					name: '景区',
+					category: 0,
+					draggable: true
+				}, {
+					name: '前端',
+					category: 1,
+					draggable: true
+				}, {
+					name: '移动端',
+					category: 2,
+					draggable: true
+				}, {
+					name: '服务端',
+					category: 3,
+					draggable: true
+				}, {
+					name: 'HTML',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'CSS',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'JavaScript',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'TypeScript',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'Java',
+					category: 3,
+					draggable: true,
+				}, {
+					name: 'PHP',
+					category: 3,
+					draggable: true,
+				}, {
+					name: 'Python',
+					category: 3,
+					draggable: true,
+				}, {
+					name: 'Andriod',
+					category: 2,
+					draggable: true,
+				}, {
+					name: 'Object-C',
+					category: 2,
+					draggable: true,
+				}, {
+					name: 'Swift',
+					category: 2,
+					draggable: true,
+				}],
+				links: [{
+					source: 0,
+					target: 1,
+					value: ''
+				}, {
+					source: 0,
+					target: 2,
+					value: ''
+				}, {
+					source: 0,
+					target: 3,
+					value: ''
+				}, {
+					source: 1,
+					target: 4,
+					value: ''
+				}, {
+					source: 1,
+					target: 5,
+					value: ''
+				}, {
+					source: 1,
+					target: 6,
+					value: ''
+				}, {
+					source: 1,
+					target: 7,
+					value: ''
+				}, {
+					source: 6,
+					target: 7,
+					value: '超集'
+				}, {
+					source: 3,
+					target: 8,
+					value: ''
+				}, {
+					source: 3,
+					target: 9,
+					value: ''
+				}, {
+					source: 3,
+					target: 10,
+					value: ''
+				}, {
+					source: 9,
+					target: 10,
+					value: '脚本'
+				}, {
+					source: 2,
+					target: 11,
+					value: ''
+				}, {
+					source: 2,
+					target: 12,
+					value: ''
+				}, {
+					source: 2,
+					target: 13,
+					value: ''
+				}, {
+					source: 12,
+					target: 13,
+					value: 'iOS'
+				}],
+				lineStyle: {
+					normal: {
+						opacity: 0.9,
+						width: 1,
+						curveness: 0
+					}
+				}
+			}]
+		};
+		relationChart2.setOption(relationOpt2);
+		//第三个
+		const relationChart3 = echarts.init(document.getElementById("relationChart3"));
+		const relationOpt3 = {
+			animationDurationUpdate: 1500,
+			animationEasingUpdate: 'quinticInOut',
+			label: {
+				normal: {
+					show: true,
+					textStyle: {
+						fontSize: 12
+					}
+				}
+			},
+			series: [{
+				type: 'graph',
+				symbolSize: 45,
+				focusNodeAdjacency: true,
+				roam: true,
+				layout: 'force',
+				force: {
+					repulsion: 320 //斥力因子，值越大，斥力越大
+				},
+				label: {
+					normal: {
+						show: true,
+						textStyle: {
+							fontSize: 12
+						},
+					}
+				},
+				edgeSymbolSize: [4, 50],
+				edgeLabel: {
+					normal: {
+						// show: true,
+						textStyle: {
+							fontSize: 10
+						},
+						formatter: "{c}"
+					}
+				},
+				categories: [{
+					name: '景区',
+					itemStyle: {
+						normal: {
+							color: '#f2637b'
+						}
+					}
+				}, {
+					name: '前端',
+					itemStyle: {
+						normal: {
+							color: "#eaa674",
+						}
+					}
+				}, {
+					name: '移动端',
+					itemStyle: {
+						normal: {
+							color: "#3aa1ff",
+						}
+					}
+				}, {
+					name: '服务端',
+					itemStyle: {
+						normal: {
+							color: "#4ecb73",
+						}
+					}
+				}],
+				data: [{
+					name: '景区',
+					category: 0,
+					draggable: true
+				}, {
+					name: '1',
+					category: 1,
+					draggable: true
+				}, {
+					name: '移动端',
+					category: 2,
+					draggable: true
+				}, {
+					name: '服务端',
+					category: 3,
+					draggable: true
+				}, {
+					name: 'HTML',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'CSS',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'JavaScript',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'TypeScript',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'Java',
+					category: 3,
+					draggable: true,
+				}, {
+					name: 'PHP',
+					category: 3,
+					draggable: true,
+				}, {
+					name: 'Python',
+					category: 3,
+					draggable: true,
+				}, {
+					name: 'Andriod',
+					category: 2,
+					draggable: true,
+				}, {
+					name: 'Object-C',
+					category: 2,
+					draggable: true,
+				}, {
+					name: 'Swift',
+					category: 2,
+					draggable: true,
+				}],
+				links: [{
+					source: 0,
+					target: 1,
+					value: ''
+				}, {
+					source: 0,
+					target: 2,
+					value: ''
+				}, {
+					source: 0,
+					target: 3,
+					value: ''
+				}, {
+					source: 1,
+					target: 4,
+					value: ''
+				}, {
+					source: 1,
+					target: 5,
+					value: ''
+				}, {
+					source: 1,
+					target: 6,
+					value: ''
+				}, {
+					source: 1,
+					target: 7,
+					value: ''
+				}, {
+					source: 6,
+					target: 7,
+					value: '超集'
+				}, {
+					source: 3,
+					target: 8,
+					value: ''
+				}, {
+					source: 3,
+					target: 9,
+					value: ''
+				}, {
+					source: 3,
+					target: 10,
+					value: ''
+				}, {
+					source: 9,
+					target: 10,
+					value: '脚本'
+				}, {
+					source: 2,
+					target: 11,
+					value: ''
+				}, {
+					source: 2,
+					target: 12,
+					value: ''
+				}, {
+					source: 2,
+					target: 13,
+					value: ''
+				}, {
+					source: 12,
+					target: 13,
+					value: 'iOS'
+				}],
+				lineStyle: {
+					normal: {
+						opacity: 0.9,
+						width: 1,
+						curveness: 0
+					}
+				}
+			}]
+		};
+		relationChart3.setOption(relationOpt3);
+
+		const relationChart = echarts.init(document.getElementById("relationChart"));
+		const relationOpt = {
+			animationDurationUpdate: 1500,
+			animationEasingUpdate: 'quinticInOut',
+			label: {
+				normal: {
+					show: true,
+					textStyle: {
+						fontSize: 12
+					}
+				}
+			},
+			series: [{
+				type: 'graph',
+				symbolSize: 45,
+				focusNodeAdjacency: true,
+				roam: true,
+				layout: 'force',
+				force: {
+					repulsion: 320 //斥力因子，值越大，斥力越大
+				},
+				label: {
+					normal: {
+						show: true,
+						textStyle: {
+							fontSize: 12
+						},
+					}
+				},
+				edgeSymbolSize: [4, 50],
+				edgeLabel: {
+					normal: {
+						show: true,
+						textStyle: {
+							fontSize: 10
+						},
+						formatter: "{c}"
+					}
+				},
+				categories: [{
+					name: '12',
+					itemStyle: {
+						normal: {
+							color: '#f2637b'
+						}
+					}
+				}, {
+					name: '前端',
+					itemStyle: {
+						normal: {
+							color: "#eaa674",
+						}
+					}
+				}, {
+					name: '移动端',
+					itemStyle: {
+						normal: {
+							color: "#3aa1ff",
+						}
+					}
+				}, {
+					name: '服务端',
+					itemStyle: {
+						normal: {
+							color: "#4ecb73",
+						}
+					}
+				}],
+				data: [{
+					name: '12',
+					category: 0,
+					draggable: true
+				}, {
+					name: '前端',
+					category: 1,
+					draggable: true
+				}, {
+					name: '移动端',
+					category: 2,
+					draggable: true
+				}, {
+					name: '服务端',
+					category: 3,
+					draggable: true
+				}, {
+					name: 'HTML',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'CSS',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'JavaScript',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'TypeScript',
+					category: 1,
+					draggable: true,
+				}, {
+					name: 'Java',
+					category: 3,
+					draggable: true,
+				}, {
+					name: 'PHP',
+					category: 3,
+					draggable: true,
+				}, {
+					name: 'Python',
+					category: 3,
+					draggable: true,
+				}, {
+					name: 'Andriod',
+					category: 2,
+					draggable: true,
+				}, {
+					name: 'Object-C',
+					category: 2,
+					draggable: true,
+				}, {
+					name: 'Swift',
+					category: 2,
+					draggable: true,
+				}],
+				links: [{
+					source: 0,
+					target: 1,
+					value: ''
+				}, {
+					source: 0,
+					target: 2,
+					value: ''
+				}, {
+					source: 0,
+					target: 3,
+					value: ''
+				}, {
+					source: 1,
+					target: 4,
+					value: ''
+				}, {
+					source: 1,
+					target: 5,
+					value: ''
+				}, {
+					source: 1,
+					target: 6,
+					value: ''
+				}, {
+					source: 1,
+					target: 7,
+					value: ''
+				}, {
+					source: 6,
+					target: 7,
+					value: '超集'
+				}, {
+					source: 3,
+					target: 8,
+					value: ''
+				}, {
+					source: 3,
+					target: 9,
+					value: ''
+				}, {
+					source: 3,
+					target: 10,
+					value: ''
+				}, {
+					source: 9,
+					target: 10,
+					value: '脚本'
+				}, {
+					source: 2,
+					target: 11,
+					value: ''
+				}, {
+					source: 2,
+					target: 12,
+					value: ''
+				}, {
+					source: 2,
+					target: 13,
+					value: ''
+				}, {
+					source: 12,
+					target: 13,
+					value: 'iOS'
+				}],
+				lineStyle: {
+					normal: {
+						opacity: 0.9,
+						width: 1,
+						curveness: 0
+					}
+				}
+			}]
+		};
+		relationChart.setOption(relationOpt);
+
+
+	</script>
+
+
+
+</body>
+
+</html>
